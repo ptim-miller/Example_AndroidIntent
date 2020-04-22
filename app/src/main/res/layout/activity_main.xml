@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/swNewsFilter"
+        android:layout_width="131dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="32dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5 "
+        android:text="News Only?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textSearch"
+        android:layout_width="241dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="Enter topic"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swNewsFilter" />
+
+    <RadioGroup
+        android:id="@+id/rgButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSearch">
+
+        <RadioButton
+            android:id="@+id/rbDuckDuck"
+            android:layout_width="256dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center_horizontal"
+            android:checked="true"
+            android:text="DuckDuckGo"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteY="144dp" />
+
+        <RadioButton
+            android:id="@+id/rbGoogle"
+            android:layout_width="256dp"
+            android:layout_height="55dp"
+            android:checked="false"
+            android:text="Google"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/rbCNN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="CNN"
+            android:textSize="25sp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@+id/rbDuckDuck" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnBrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Browser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textSearch"
+        app:layout_constraintTop_toBottomOf="@+id/swNewsFilter" />
+
+    <Button
+        android:id="@+id/btnInternal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Internal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textSearch"
+        app:layout_constraintTop_toBottomOf="@+id/btnBrowser" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
